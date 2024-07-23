@@ -1,0 +1,27 @@
+name: superhtml
+description: HTML Language Server & Templating Language Library
+homepage: https://github.com/kristoff-it/superhtml
+licenses:
+  - MIT
+languages:
+  - HTML
+  - SuperHTML
+categories:
+  - LSP
+  - Formatter
+
+source:
+  # renovate:datasource=github-tags
+  id: pkg:github/kristoff-it/superhtml@v0.3.1
+  build:
+    - target: unix
+      run: |
+        zig build
+      bin: zig-out/bin/superhtml
+    - target: win
+      run: |
+        zig build
+      bin: zig-out/bin/superhtml.exe
+
+bin:
+  superhtml: "{{source.build.bin}}"
