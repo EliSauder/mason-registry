@@ -12,7 +12,7 @@ categories:
 
 source:
   # renovate:datasource=github-tags
-  id: pkg:github/EliSauder/superhtml#f1e37166c51ba5a973381f5eea6aa3e49c0e67ce
+  id: pkg:github/kristoff-it/superhtml@v0.4.1
   build:
     - target: unix
       run: |
